@@ -10,6 +10,7 @@ return{
     sidebar_filetypes = {
       ['neo-tree'] = {event = 'BufWipeout'}
     },
+    current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
   },
   version = '^1.0.0', -- optional: only update when a new 1.x version is released
 }

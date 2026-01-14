@@ -5,8 +5,8 @@ local opts = { noremap = true, silent = true }
 -- =========================================================
 -- Clipboard
 -- =========================================================
-map({ "n", "v" }, "<leader>y", '"+y', opts)  -- Copy to system clipboard
-map({ "n", "v" }, "<leader>p", '"+p', opts)  -- Paste from system clipboard
+map({ "n", "v" }, "<leader>y", '"+y', { desc = 'Copy to System Clipboard'})  -- Copy to system clipboard
+map({ "n", "v" }, "<leader>p", '"+p', { desc = 'Paste from System Clipboard'})  -- Paste from system clipboard
 
 -- =========================================================
 -- Telescope
@@ -17,7 +17,7 @@ map('n', '<leader>fg', ':Telescope live_grep<CR>', { desc = 'Telescope: live gre
 -- =========================================================
 -- Neo-tree
 -- =========================================================
-map('n', '<leader>e', ':Neotree filesystem reveal left<CR>', opts)
+map('n', '<leader>e', ':Neotree filesystem reveal left<CR>', { desc = 'File Explorer'})
 
 -- =========================================================
 -- Barbar (Buffer management)
@@ -53,14 +53,14 @@ local function new_float_term()
 end
 
 -- Toggle / focus last terminal
-map("n", "<leader>tf", "<cmd>ToggleTerm<CR>", opts)
+map("n", "<leader>tf", "<cmd>ToggleTerm<CR>", {desc = "Toggle Terminal"})
 
 -- Spawn a brand new floating terminal
-map("n", "<leader>tt", new_float_term, opts)
+map("n", "<leader>tt", new_float_term, {desc='New Floating Terminal'})
 
 -- Terminal buffer selection and naming
-map("n", "<leader>ts", "<cmd>TermSelect<CR>", opts)
-map("n", "<leader>tn", "<cmd>ToggleTermSetName<CR>", opts)
+map("n", "<leader>ts", "<cmd>TermSelect<CR>", {desc='Terminal Selection'})
+map("n", "<leader>tn", "<cmd>ToggleTermSetName<CR>", {desc='Terminal Naming'})
 
 -- Terminal navigation / insert mode
 map("t", "jk", [[<C-\><C-n>]], opts)         -- Exit terminal input mode
@@ -73,3 +73,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.cmd("startinsert")
   end,
 })
+
+-- Lazy
+map("n", "<leader>ll", "<cmd>Lazy<CR>", {desc = "Lazy Package Manager"})
+
