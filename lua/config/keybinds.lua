@@ -63,7 +63,7 @@ map("n", "<leader>ts", "<cmd>TermSelect<CR>", opts)
 map("n", "<leader>tn", "<cmd>ToggleTermSetName<CR>", opts)
 
 -- Terminal navigation / insert mode
-map("t", "<Esc>", [[<C-\><C-n>]], opts)         -- Exit terminal input mode
+map("t", "jk", [[<C-\><C-n>]], opts)         -- Exit terminal input mode
 map("n", "i", "<cmd>startinsert<CR>", opts)     -- Enter insert mode
 map("t", "<leader>q", [[<C-\><C-n><cmd>close<CR>]], opts) -- Close terminal window
 
