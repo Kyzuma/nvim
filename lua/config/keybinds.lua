@@ -55,9 +55,8 @@ map("n", "<leader>ts", "<cmd>TermSelect<CR>", { desc = "Terminal Selection" })
 map("n", "<leader>tn", "<cmd>ToggleTermSetName<CR>", { desc = "Terminal Naming" })
 
 -- Terminal navigation / insert mode
-map("t", "<Esc>", [[<C-\><C-n>]], opts) -- Exit terminal input mode
-map("n", "i", "<cmd>startinsert<CR>", opts) -- Enter insert mode
 map("t", "<leader>q", [[<C-\><C-n><cmd>close<CR>]], opts) -- Close terminal window
+map("t", "<Esc><Esc>", [[<C-\><C-n>]], opts)
 
 -- Auto enter insert mode whenever opening a terminal
 vim.api.nvim_create_autocmd("TermOpen", {
