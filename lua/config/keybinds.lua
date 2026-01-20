@@ -1,4 +1,4 @@
--- Helper
+-- Helperkey
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
@@ -80,3 +80,10 @@ map("n", "<leader>m", "<Cmd>Mason<CR>", { desc = "Mason" })
 -- Alpha
 -- =========================================================
 map("n", "<leader>\\", "<Cmd>Alpha<CR>", { desc = "Dashboard" })
+
+-- =========================================================
+-- Github Copilot Chat
+-- ========================================================
+map("n", "<leader>cc", "<Cmd>CopilotChatToggle<CR>", { desc = "Toggle GitHub Copilot Chat" })
+map("n", "<leader>cm", "<Cmd>CopilotChatModels<CR>", { desc = "GitHub Copilot Chat Models" })
+map("n", "<leader>cg", "<Cmd>CopilotChatCommit<CR>", { desc = "Github Copilot Git Message" })
