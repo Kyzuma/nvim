@@ -19,7 +19,7 @@ return {
 				height = 25,
 				border = "rounded",
 				title = " Copilot Chat ",
-				zindex = 100,
+				-- zindex = 100,
 			},
 
 			headers = {

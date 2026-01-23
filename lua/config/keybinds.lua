@@ -87,3 +87,21 @@ map("n", "<leader>\\", "<Cmd>Alpha<CR>", { desc = "Dashboard" })
 map("n", "<leader>cc", "<Cmd>CopilotChatToggle<CR>", { desc = "Toggle GitHub Copilot Chat" })
 map("n", "<leader>cm", "<Cmd>CopilotChatModels<CR>", { desc = "GitHub Copilot Chat Models" })
 map("n", "<leader>cg", "<Cmd>CopilotChatCommit<CR>", { desc = "Github Copilot Git Message" })
+
+-- =========================================================
+-- Smart Splits
+-- =========================================================
+-- moving between splits
+map("n", "<C-h>", require("smart-splits").move_cursor_left)
+map("n", "<C-j>", require("smart-splits").move_cursor_down)
+map("n", "<C-k>", require("smart-splits").move_cursor_up)
+map("n", "<C-l>", require("smart-splits").move_cursor_right)
+
+-- =========================================================
+-- LSP Diagnostics
+-- =========================================================
+map("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+map("n", "<leader>d", function()
+	vim.diagnostic.open_float(nil, { scope = "line" })
+end, { desc = "Open diagnostic float" })

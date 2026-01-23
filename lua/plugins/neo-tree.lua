@@ -19,6 +19,12 @@ return {
 					nowait = true,
 				},
 			},
+			filesystem = {
+				filtered_items = {
+					hide_dotfiles = "untracked",
+					hide_gitignored = false,
+				},
+			},
 		},
 	},
 }
