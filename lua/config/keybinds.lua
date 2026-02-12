@@ -105,3 +105,7 @@ map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message
 map("n", "<leader>d", function()
 	vim.diagnostic.open_float(nil, { scope = "line" })
 end, { desc = "Open diagnostic float" })
+
+vim.keymap.set("n", "<leader>fd", require("telescope.builtin").lsp_definitions, { desc = "Fuzzy Definitions" })
+vim.keymap.set("n", "<leader>fi", require("telescope.builtin").lsp_implementations, { desc = "Fuzzy Implementations" })
+vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { desc = "Fuzzy References" })
